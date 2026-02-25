@@ -17,15 +17,54 @@
 
 
         if ( id == 2026)
-        { Console.WriteLine("Usuario reconocido"); }
-        else { Console.WriteLine("usuario no reconocido"); }
+        { Console.WriteLine("Usuario reconocido");
+            idCorrecto = true;
+        }
+        else { Console.WriteLine("usuario no reconocido"); 
+        }
         if ( pin == 1234)
-        { Console.WriteLine("PIN correcto"); }
-        else { Console.WriteLine("PIN incorrecto"); }
+        { Console.WriteLine("PIN correcto");
+            pinCorrecto = true;
+        }
+        else { Console.WriteLine("PIN incorrecto"); 
+        }
         if (token == 777)
-        { Console.WriteLine("Token válido"); }
-        else { Console.WriteLine("inválido"); } 
+        { Console.WriteLine("Token válido");
+            tokenCorrecto = true;
+        }
+        else { Console.WriteLine("Token inválido"); 
+        }
 
+
+        if (modoSeguro == 1)
+        {
+            Console.WriteLine("Modo seguro activado");
+        }
+        else
+        {
+            Console.WriteLine("Modo seguro desactivado");
+        }
+
+        if (idCorrecto && pinCorrecto && tokenCorrecto)
+        {
+            Console.WriteLine("Acceso Total concedido");
+        }
+        else
+        {
+            Console.WriteLine("Acceso total denegado");
+        }
+
+        if (modoSeguro == 1)
+        {
+            if (token >= 700)
+            {
+                Console.WriteLine("Regla extra aprobada");
+            }
+            else
+            {
+                Console.WriteLine("Regla extra denegada");
+            }
+        }
 
 
     }
