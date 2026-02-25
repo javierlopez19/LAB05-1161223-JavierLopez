@@ -8,6 +8,13 @@
         int pin = int.Parse(Console.ReadLine());
         Console.WriteLine("Ingrese el Token: ");
         int token = int.Parse(Console.ReadLine());
+        Console.WriteLine("¿Modo seguro activado? 1 = Si, 0 = No");
+        int modoSeguro = int.Parse(Console.ReadLine());
+
+        bool idCorrecto = false;
+        bool pinCorrecto = false;
+        bool tokenCorrecto = false;
+
 
         if ( id == 2026)
         { Console.WriteLine("Usuario reconocido"); }
